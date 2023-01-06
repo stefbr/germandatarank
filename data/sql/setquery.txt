@@ -1,0 +1,2 @@
+SELECT winner_id, p1_id, p2_id, p1_score, p2_score, tournament_key FROM sets
+WHERE p1_id = <P1> and p2_id = <P2>

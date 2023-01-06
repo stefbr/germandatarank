@@ -1,0 +1,12 @@
+SELECT cleaned_name, placings from tournament_info
+WHERE country="DE" AND start > 1640991600 AND entrants >= 16 AND online = 0 AND tournament_event NOT LIKE "%amateur%" AND tournament_event NOT LIKE "%redemption%" AND tournament_event NOT LIKE "%squad%"
+ORDER BY start ASC
+
+
+SELECT cleaned_name, placings, entrants from tournament_info
+WHERE (country="DE" OR country = "GB" OR country = "NL" OR country = "FR" OR
+             country = "IT" OR country = "BE" OR country = "LU" OR country = "ES" OR
+             country = "AT" OR country = "IT" OR country = "DK" OR country = "CH" OR
+             country = "SE" OR country = "NO" OR country = "FI" OR country = "IE")
+		AND start > 1640991600 AND entrants >= 16 AND online = 0 AND tournament_event NOT LIKE "%amateur%" AND tournament_event NOT LIKE "%redemption%" AND tournament_event NOT LIKE "%squad%"
+ORDER BY start ASC

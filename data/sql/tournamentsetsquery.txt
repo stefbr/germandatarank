@@ -1,0 +1,3 @@
+SELECT winner_id, p1_id, p2_id, p1_score, p2_score, set_order, tournament_key FROM sets
+WHERE tournament_key = "<TOURNAMENT_KEY>"
+ORDER BY bracket_order ASC

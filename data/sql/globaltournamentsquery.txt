@@ -1,0 +1,4 @@
+SELECT cleaned_name, key from tournament_info
+WHERE entrants >= 48 AND online = 0 AND tournament_event NOT LIKE "%amateur%" AND
+      tournament_event NOT LIKE "%redemption%"AND tournament_event NOT LIKE "%squad%"
+ORDER BY start ASC
